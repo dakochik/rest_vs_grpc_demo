@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.grpc;
+
+message PetInfoResponse {
+  string info = 1;
+}
+
+message PetInfoRequest {}
+
+service PetInfoService {
+  rpc getName(PetInfoRequest) returns(PetInfoResponse) {}
+  rpc getOwnerName(PetInfoRequest) returns(PetInfoResponse) {}
+}

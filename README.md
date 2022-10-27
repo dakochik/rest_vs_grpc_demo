@@ -1,5 +1,10 @@
 # REST vs gRPC demo application
 
+## Shared services
+
+### Service registry & discovery
+Port: 8761
+
 ## REST API
 
 ### Owner
@@ -25,9 +30,6 @@ GET /pet/** -> pet microservice
 
 GET /owner/** -> owner microservice
 ```
-
-### Service registry & discovery
-Port: 8761
 
 ## gRPC API
 

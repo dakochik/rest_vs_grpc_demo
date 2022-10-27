@@ -1,0 +1,27 @@
+grpc:
+  client:
+    owner-grpc:
+      address: 'discovery:///owner-grpc'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
+    pet-grpc:
+      address: 'discovery:///pet-grpc'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
+spring:
+  application:
+    name: gateway-grpc
+server:
+  port: 6569
+eureka:
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
